@@ -1,0 +1,36 @@
+//* IMPORTS
+
+@use './styles/global/vars';
+@use './styles/global/mixins';
+@use './styles/global/extends';
+@use './styles/components/cards';
+@use './styles/components/header';
+@use './styles/components/footer';
+
+//* GENERAL
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: vars.$bg-light-mode;
+  color: vars.$text-light-mode-color;
+  font-family: vars.$font-primary;
+}
+
+.dark {
+  background-color: vars.$bg-dark-mode;
+  color: vars.$text-dark-mode-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}

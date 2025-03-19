@@ -1,0 +1,11 @@
+//* IMPORTS
+
+@use '../global/vars';
+@use '../global/mixins';
+@use '../global/extends';
+
+.cardSection {
+  width: 90%;
+  margin: auto;
+  height: fit-content;
+}

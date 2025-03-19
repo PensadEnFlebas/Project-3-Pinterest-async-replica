@@ -1,0 +1,105 @@
+//! FONTS
+
+//? FONT FAMILY
+@font-face {
+  font-family: palanquinReg;
+  src: url(../fonts/Palanquin/Palanquin-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: palanquinDarkReg;
+  src: url(../fonts/Palanquin_Dark/PalanquinDark-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: caslonAnt;
+  src: url(../fonts/Caslon/CaslonAntique.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: caslonPro;
+  src: url(../fonts/Caslon/ACaslonPro-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-primary: palanquinReg, 'Open Sans', system-ui, -apple-system,
+  BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+  'Helvetica Neue', sans-serif;
+$font-secondary: palanquinDarkReg, 'Open Sans', system-ui, -apple-system,
+  BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+  'Helvetica Neue', sans-serif;
+$font-text: caslonAnt, 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font-button: caslonPro, 'Open Sans', system-ui, -apple-system,
+  BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+  'Helvetica Neue', sans-serif;
+
+//? FONT SIZE
+$primary-title-font-size: 50px;
+$secondary-title-font-size: 30px;
+$button-font-size: 2.5em;
+$button-font-size-small: 1.5em;
+$button-font-size-extraSmall: 1.2em;
+$p-shopping-number: 0.9em;
+$link-font-size: 16px;
+$text-mediaquery-font-size: 12px;
+
+//! COLORS
+
+$primary-color: #151515;
+$secondary-color: #cacaca;
+$tertiary-color: whitesmoke;
+$logo-color: #e60022;
+$transparent-color: transparent;
+
+$text-light-mode-color: $primary-color;
+$text-dark-mode-color: $secondary-color;
+
+$bg-light-mode: $tertiary-color;
+$bg-dark-mode: $primary-color;
+
+$button-primary-color: $secondary-color;
+$button-secondary-color: $primary-color;
+
+$input-color: $secondary-color;
+
+//! SPACINGS
+
+$spacing-xxs: 5px;
+$spacing-xs: 10px;
+$spacing-s: 15px;
+$spacing-m: 20px;
+$spacing-l: 25px;
+$spacing-xl: 30px;
+$spacing-xxl: 35px;
+
+$spacing-rem-xxs: 0.6rem;
+$spacing-rem-xs: 0.8rem;
+$spacing-rem-s: 1rem;
+$spacing-rem-m: 1.2rem;
+$spacing-rem-l: 1.4rem;
+$spacing-rem-xl: 1.6rem;
+$spacing-rem-xxl: 2rem;
+
+$gap-xxs: $spacing-rem-xxs;
+$gap-xs: $spacing-rem-xs;
+$gap-s: $spacing-rem-s;
+$gap-m: $spacing-rem-m;
+$gap-l: $spacing-rem-l;
+$gap-xl: $spacing-rem-xl;
+$gap-xxl: $spacing-rem-xxl;
+
+//! BORDERS
+
+$noBorder: none;

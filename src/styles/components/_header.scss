@@ -1,0 +1,194 @@
+//* IMPORTS
+
+@use '../global/vars';
+@use '../global/mixins';
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  @include mixins.flex-box(
+    $jc: space-evenly,
+    $gap: vars.$gap-s,
+    $wrap: no-wrap
+  );
+
+  height: (vars.$spacing-xl * 5);
+  width: 100%;
+  background-color: vars.$bg-light-mode;
+
+  .logoImg {
+    cursor: pointer;
+
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  .headerElementsContainer {
+    @include mixins.flex-box(
+      $jc: space-evenly,
+      $gap: vars.$gap-s,
+      $wrap: no-wrap
+    );
+
+    padding: vars.$spacing-xl vars.$spacing-rem-xxl;
+    margin: auto;
+    width: 100%;
+    max-width: (vars.$spacing-l * 40);
+
+    h1 {
+      display: none;
+    }
+
+    img {
+      height: vars.$spacing-xl;
+      width: vars.$spacing-xl;
+    }
+
+    input {
+      width: 100%;
+      max-width: (vars.$spacing-xl * 30);
+      min-width: (vars.$spacing-m * 20);
+      outline: none;
+      border: none;
+      font-family: vars.$font-button;
+      font-style: italic;
+      letter-spacing: (vars.$spacing-xxs / 5);
+
+      padding: vars.$spacing-rem-s vars.$spacing-rem-l;
+      border-radius: vars.$spacing-rem-xxl;
+      background-color: vars.$input-color;
+      border: none;
+      font-size: vars.$spacing-rem-s;
+    }
+
+    button {
+      @include mixins.flex-box();
+
+      height: (vars.$spacing-xl + vars.$spacing-xs);
+      width: (vars.$spacing-xl + vars.$spacing-xs);
+      min-width: (vars.$spacing-xl + vars.$spacing-xs);
+      border-radius: 50%;
+      border: none;
+      background-color: vars.$input-color;
+
+      cursor: pointer;
+
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+.searchDiv {
+  @include mixins.flex-box($wrap: no-wrap);
+
+  width: 100%;
+  max-width: (vars.$spacing-xl * 20);
+  border-radius: vars.$spacing-rem-xxl;
+
+  background-color: vars.$input-color;
+
+  .searchButtonImg {
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
+
+#darkThemeButton {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    border: 2px solid red;
+  }
+}
+
+.profileContainer {
+  @include mixins.flex-box($direction: column);
+
+  .profileImg {
+    border-radius: 50%;
+    height: (vars.$spacing-xl * 2);
+    width: (vars.$spacing-xl * 2);
+  }
+
+  .profileName {
+    font-family: vars.$font-primary;
+    width: fit-content;
+    padding: 0 vars.$spacing-xxs;
+    line-height: vars.$spacing-s;
+  }
+}
+
+@media (max-width: 666px) {
+  header {
+    height: fit-content;
+
+    .headerElementsContainer {
+      padding: vars.$spacing-xs vars.$spacing-rem-xxs !important;
+
+      input {
+        min-width: (vars.$spacing-m * 10);
+      }
+
+      #darkThemeButton {
+        height: vars.$spacing-xl;
+        width: vars.$spacing-xl;
+        min-width: vars.$spacing-xl;
+
+        #darkThemeIcon {
+          height: vars.$spacing-l;
+          width: vars.$spacing-l;
+        }
+      }
+    }
+  }
+
+  .searchDiv {
+    @include mixins.flex-box($wrap: no-wrap);
+
+    width: 100%;
+    max-width: (vars.$spacing-xl * 10);
+    border-radius: vars.$spacing-rem-xxl;
+
+    background-color: vars.$input-color;
+  }
+
+  .profileImg {
+    height: (vars.$spacing-m * 2) !important;
+    width: (vars.$spacing-m * 2) !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .headerElementsContainer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 370px) {
+  .logoImg {
+    transform: translateX(-50px);
+  }
+
+  h1 {
+    display: block !important;
+    font-family: vars.$font-text;
+    font-size: vars.$text-mediaquery-font-size;
+  }
+
+  input {
+    min-width: (vars.$spacing-m * 6);
+  }
+}
+
+@media (max-width: 320px) {
+  .logoImg {
+    transform: translateX(-30px);
+  }
+}

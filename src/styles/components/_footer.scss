@@ -1,0 +1,15 @@
+//* IMPORTS
+
+@use '../global/vars';
+@use '../global/mixins';
+
+footer {
+  @include mixins.flex-box();
+
+  height: 15vh;
+  font-family: vars.$font-secondary;
+
+  h4 {
+    text-align: center;
+  }
+}

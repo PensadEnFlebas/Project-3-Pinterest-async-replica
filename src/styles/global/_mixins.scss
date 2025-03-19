@@ -1,0 +1,22 @@
+//* IMPORTS
+
+@use './vars';
+
+//? FLEX MIXINS
+
+@mixin flex-box(
+  $direction: row,
+  $jc: center,
+  $ai: center,
+  $gap: null,
+  $wrap: wrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+  @if $gap != null {
+    gap: $gap;
+  }
+  flex-wrap: $wrap;
+}
