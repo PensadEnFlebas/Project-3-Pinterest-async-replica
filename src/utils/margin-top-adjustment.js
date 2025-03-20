@@ -9,15 +9,3 @@ export function adjustMainMargin() {
 
   resizeObserver.observe(header)
 }
-
-// export function setScrollMarginTop(referenceElement, targetElement) {
-//   function updateScrollMargin() {
-//     const refHeight = referenceElement.offsetHeight
-//     targetElement.style.scrollMarginTop = `${refHeight}px`
-//   }
-
-//   const resizeObserver = new ResizeObserver(updateScrollMargin)
-//   resizeObserver.observe(referenceElement)
-
-//   updateScrollMargin()
-// }
