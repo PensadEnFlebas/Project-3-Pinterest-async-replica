@@ -25,6 +25,10 @@ export function printRatiosInfo(photo, type) {
       loading: 'lazy'
     })
     numberP.textContent = `${photo.likes}`
+
+    infoIcon.addEventListener('click', () => {
+      window.open(`${photo.user.links.html}/likes`, '_blank')
+    })
   } else if (type === 'photos') {
     infoIcon = createElement('img', {
       className: 'photosIcon ratiosIcon',
@@ -33,6 +37,10 @@ export function printRatiosInfo(photo, type) {
       loading: 'lazy'
     })
     numberP.textContent = `${photo.user.total_photos}`
+
+    infoIcon.addEventListener('click', () => {
+      window.open(photo.user.links.html, '_blank')
+    })
   }
 
   numberContainer.appendChild(numberP)
@@ -76,6 +84,10 @@ export function printUserInfo(photo) {
 
   userDateDiv.append(uploadedIcon, userDateP)
   userInfoContainer.append(userImg, userName, userDateDiv)
+
+  userInfoContainer.addEventListener('click', () => {
+    window.open(photo.user.links.html, '_blank')
+  })
 
   return userInfoContainer
 }

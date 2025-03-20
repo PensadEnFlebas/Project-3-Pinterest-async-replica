@@ -20,6 +20,10 @@ export function cardTemplate(photo) {
     textContent: 'Go to...'
   })
 
+  cardButton.addEventListener('click', () => {
+    window.open(photo.links.html, '_blank')
+  })
+
   card.append(
     printRatiosInfo(photo, 'photos'),
     printRatiosInfo(photo, 'likes'),
