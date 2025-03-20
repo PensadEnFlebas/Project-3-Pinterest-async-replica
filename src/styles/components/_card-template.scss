@@ -1,0 +1,92 @@
+//* IMPORTS
+
+@use '../global/vars';
+@use '../global/mixins';
+@use '../global/extends';
+
+.card {
+  padding: vars.$spacing-rem-s;
+  border-radius: vars.$border-radius-s;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card:nth-child(even) {
+  margin-top: vars.$spacing-m + vars.$spacing-xl;
+}
+
+.card:nth-child(odd) {
+  margin-bottom: vars.$spacing-m + vars.$spacing-xl;
+}
+
+.cardImg {
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  border: 8px solid transparent;
+  border-radius: vars.$border-radius-m;
+  aspect-ratio: auto;
+
+  width: 100%;
+  height: 100%;
+
+  animation: 8s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.cardButton {
+  display: none;
+}
+
+.card:hover .cardButton {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+
+  width: 50%;
+  height: fit-content;
+  padding-top: vars.$spacing-xxs;
+  padding-bottom: 2px;
+
+  background-color: vars.$logo-color;
+  color: vars.$tertiary-color;
+  font-family: vars.$font-button;
+  font-size: vars.$button-font-size-extraSmall;
+
+  box-shadow: 5px 5px 15px 5px vars.$primary-color;
+  border-radius: vars.$border-radius-l;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: vars.$tertiary-color;
+    color: vars.$logo-color;
+  }
+}
+
+@media (max-width: 600px) {
+  .card:nth-child(even) {
+    margin-top: 0px;
+    margin-left: vars.$spacing-xl;
+  }
+
+  .card:nth-child(odd) {
+    margin-bottom: 0px;
+    margin-right: vars.$spacing-xl;
+  }
+}

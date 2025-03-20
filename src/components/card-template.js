@@ -15,10 +15,16 @@ export function cardTemplate(photo) {
     loading: 'lazy'
   })
 
+  const cardButton = createElement('button', {
+    className: 'cardButton',
+    textContent: 'Go to...'
+  })
+
   card.append(
     printRatiosInfo(photo, 'photos'),
     printRatiosInfo(photo, 'likes'),
     cardImg,
+    cardButton,
     printUserInfo(photo)
   )
 

@@ -16,7 +16,8 @@ export async function cardSection(keyword = 'cat') {
   }
 
   const imgContainer =
-    document.querySelector('.ul') || createElement('ul', { className: 'ul' })
+    document.querySelector('.imgContainer') ||
+    createElement('ul', { className: 'imgContainer' })
 
   imgContainer.innerHTML = ''
 
@@ -33,13 +34,24 @@ export async function cardSection(keyword = 'cat') {
 
       allPhotos.forEach((photo) => {
         const card = cardTemplate(photo)
+
+        const cardImg = card.querySelector('.cardImg')
+
+        if (cardImg) {
+          cardImg.style.setProperty(
+            'background',
+            `linear-gradient(#131219, ${photo.color}) padding-box,
+            linear-gradient(var(--angle), #070707, ${photo.color}) border-box`
+          )
+        }
+
         imgContainer.appendChild(card)
       })
     } else {
-      imgContainer.innerHTML = '<p>No results found</p>'
+      imgContainer.innerHTML = '<p class = "errorMessage">No results found</p>'
     }
   } catch (error) {
-    imgContainer.innerHTML = `<p>Error loading images: ${error.message}. Try again</p>`
+    imgContainer.innerHTML = `<p class = "errorMessage">Error loading images: ${error.message}. Try again</p>`
   }
 
   cardSection.appendChild(imgContainer)

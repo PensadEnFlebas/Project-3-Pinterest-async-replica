@@ -48,10 +48,11 @@ $font-button: caslonPro, 'Open Sans', system-ui, -apple-system,
 //? FONT SIZE
 $primary-title-font-size: 50px;
 $secondary-title-font-size: 30px;
+$card-text-font-size: 14px;
 $button-font-size: 2.5em;
 $button-font-size-small: 1.5em;
 $button-font-size-extraSmall: 1.2em;
-$p-shopping-number: 0.9em;
+$p-number: 0.6em;
 $link-font-size: 16px;
 $text-mediaquery-font-size: 12px;
 
@@ -103,3 +104,8 @@ $gap-xxl: $spacing-rem-xxl;
 //! BORDERS
 
 $noBorder: none;
+
+$border-radius-xs: $spacing-xs;
+$border-radius-s: 12px;
+$border-radius-m: $spacing-m;
+$border-radius-l: 50px;

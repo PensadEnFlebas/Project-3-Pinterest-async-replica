@@ -7,5 +7,33 @@
 .cardSection {
   width: 90%;
   margin: auto;
+  padding: 0 vars.$spacing-m;
+  padding-top: vars.$spacing-m;
   height: fit-content;
+  overflow: hidden;
+}
+
+.imgContainer {
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  gap: vars.$gap-s;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+}
+
+.errorMessage {
+  margin: auto;
+  padding: vars.$spacing-xs;
+  text-align: center;
+
+  font-family: vars.$font-text;
+  font-size: vars.$secondary-title-font-size;
+  text-shadow: vars.$secondary-color;
+
+  background: -webkit-linear-gradient(vars.$secondary-color, vars.$logo-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

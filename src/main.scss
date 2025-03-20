@@ -3,7 +3,9 @@
 @use './styles/global/vars';
 @use './styles/global/mixins';
 @use './styles/global/extends';
-@use './styles/components/cards';
+@use './styles/components/card-section';
+@use './styles/components/card-template';
+@use './styles/components/card-info';
 @use './styles/components/header';
 @use './styles/components/footer';
 
@@ -31,6 +33,7 @@ a {
   color: inherit;
 }
 
+ul,
 li {
   list-style-type: none;
 }

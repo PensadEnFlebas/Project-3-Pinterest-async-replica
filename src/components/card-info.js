@@ -19,7 +19,7 @@ export function printRatiosInfo(photo, type) {
 
   if (type === 'likes') {
     infoIcon = createElement('img', {
-      className: 'likesIcon',
+      classList: 'likesIcon ratiosIcon',
       src: '/assets/like-icon.svg.png',
       alt: 'Likes Icon',
       loading: 'lazy'
@@ -27,7 +27,7 @@ export function printRatiosInfo(photo, type) {
     numberP.textContent = `${photo.likes}`
   } else if (type === 'photos') {
     infoIcon = createElement('img', {
-      className: 'photosIcon',
+      className: 'photosIcon ratiosIcon',
       src: '/assets/camera-icon.png',
       alt: 'Camera Icon',
       loading: 'lazy'
@@ -48,7 +48,7 @@ export function printUserInfo(photo) {
 
   const userImg = createElement('img', {
     className: 'userImg',
-    src: photo.user.profile_image?.small || '/assets/default_profile.png',
+    src: photo.user.profile_image?.large || '/assets/default_profile.png',
     alt: `${photo.user.name || 'Unknown user'} Profile Image`,
     loading: 'lazy'
   })
