@@ -2,7 +2,6 @@
 
 @use '../global/vars';
 @use '../global/mixins';
-@use '../global/extends';
 
 .card {
   padding: vars.$spacing-rem-s;

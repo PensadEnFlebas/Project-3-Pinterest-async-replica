@@ -19,7 +19,7 @@ export function header() {
   const logoImg = createElement('img', {
     className: 'logoImg',
     title: 'Goblin Eye Logo',
-    src: '/public/assets/Goblin_Eye_sprite_004.webp',
+    src: '/assets/Goblin_Eye_sprite_004.webp',
     alt: 'Goblin Eye Logo',
     loading: 'lazy'
   })
@@ -46,7 +46,7 @@ export function header() {
 
   const searchButtonImg = createElement('img', {
     className: 'searchButtonImg',
-    src: '/public/assets/search_icon.png',
+    src: '/assets/search_icon.png',
     alt: 'Search Icon',
     loading: 'lazy'
   })
@@ -58,7 +58,7 @@ export function header() {
 
   const darkThemeIcon = createElement('img', {
     id: 'darkThemeIcon',
-    src: '/public/assets/dark_mode_icon.png',
+    src: '/assets/dark_mode_icon.png',
     alt: 'Dark theme icon',
     loading: 'lazy'
   })
@@ -70,7 +70,7 @@ export function header() {
 
   const profileImg = createElement('img', {
     className: 'profileImg',
-    src: '/public/assets/profile_icon.png',
+    src: '/assets/profile_icon.png',
     alt: 'Profile default icon',
     loading: 'lazy'
   })
