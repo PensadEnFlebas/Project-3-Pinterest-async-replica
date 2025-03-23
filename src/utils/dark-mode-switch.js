@@ -8,7 +8,7 @@ export const switchMode = () => {
   if (checkingMode === 'dark') {
     body.classList.add('dark')
     header.classList.add('dark')
-    darkThemeIcon.src = '/public/assets/light_mode_icon.png'
+    darkThemeIcon.src = '/assets/light_mode_icon.png'
   }
 
   darkmodebtn.addEventListener('click', () => {
@@ -16,8 +16,8 @@ export const switchMode = () => {
     header.classList.toggle('dark')
 
     darkThemeIcon.src = darkMode
-      ? '/public/assets/light_mode_icon.png'
-      : '/public/assets/dark_mode_icon.png'
+      ? '/assets/light_mode_icon.png'
+      : '/assets/dark_mode_icon.png'
 
     localStorage.setItem('theme', darkMode ? 'dark' : 'light')
   })
